@@ -110,6 +110,7 @@ header a[href*="wa.me"] button:hover {
     color: #C2954D;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease; /* Suaviza a transição */
+    will-change: transform; /* Otimiza o desempenho */
 }
 
 #servicos li:hover {
@@ -211,6 +212,10 @@ footer a:hover {
     header a[href*="wa.me"] button {
         width: auto; /* Ajusta largura automaticamente */
         padding: 10px 15px;
+    }
+
+    #servicos li {
+        transition: transform 0.3s ease; /* Reforça a transição para dispositivos móveis */
     }
 }
 
