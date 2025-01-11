@@ -1,0 +1,201 @@
+/* Estilo do corpo geral */
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #000000;
+    color: #C2954D;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000000;
+    background-image: url('caminho-da-imagem.jpg'); /* Ajuste o caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+
+header a[href*="wa.me"] button {
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: #FFFFFF;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+header a[href*="wa.me"] button:hover {
+    background-color: #128C7E;
+}
+
+/* Sobre */
+#sobre {
+    padding: 40px 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #C2954D;
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #D3D3D3;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Serviços */
+#servicos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#servicos h2 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#servicos ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+#servicos li {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #C2954D;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#servicos h3 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #C2954D;
+}
+
+#servicos p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #D3D3D3;
+}
+
+/* Formulário de contato */
+#contato {
+    padding: 40px 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante alinhamento central de todos os elementos */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #C2954D;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+form button {
+   background-color: #C2954D;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* O botão segue o fluxo dos outros elementos */
+    max-width: 300px; /* Define um limite de largura para o botão */
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    color: #C2954D;
+    border-top: 3px solid #C2954D;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #servicos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    header a[href*="wa.me"] button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #servicos ul {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #sobre p, #contato {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+        padding: 0 10px; /* Garante alinhamento com as margens */
+    }
+
+    form button {
+        max-width: 100%; /* O botão ocupa toda a largura disponível */
+    }
+}
