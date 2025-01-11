@@ -199,3 +199,22 @@ footer {
         max-width: 100%; /* O botão ocupa toda a largura disponível */
     }
 }
+
+/* Responsividade do cabeçalho */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Remove altura fixa */
+        min-height: 200px; /* Altura mínima para dispositivos médios */
+        padding: 20px; /* Ajusta espaçamento interno */
+        background-size: contain; /* Ajusta imagem para caber na tela */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        min-height: 150px; /* Altura mínima reduzida para dispositivos pequenos */
+        padding: 10px;
+        background-position: center top; /* Ajusta posição da imagem */
+    }
+}
