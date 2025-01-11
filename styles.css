@@ -182,6 +182,18 @@ footer {
     border-top: 3px solid #C2954D;
 }
 
+/* Links do rodapé */
+footer a {
+    color: #C2954D; /* Cor dourada para os links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: bold; /* Destaca os links */
+}
+
+footer a:hover {
+    color: #FFFFFF; /* Cor branca ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     #servicos ul {
@@ -191,6 +203,9 @@ footer {
     header {
         height: auto;
         padding-bottom: 20px;
+        background-size: cover; /* Garante que a imagem ocupe toda a largura */
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     header a[href*="wa.me"] button {
@@ -213,27 +228,15 @@ footer {
         padding: 10px;
     }
 
+    header {
+        min-height: 150px; /* Altura mínima reduzida */
+        padding: 10px;
+        background-size: cover; /* Faz a imagem ocupar toda a largura */
+        background-position: center;
+    }
+
     header a[href*="wa.me"] button {
         width: 100%; /* Ocupa toda a largura disponível */
         text-align: center;
-    }
-}
-
-/* Responsividade do cabeçalho */
-@media (max-width: 768px) {
-    header {
-        height: auto; /* Remove altura fixa */
-        min-height: 200px; /* Altura mínima para dispositivos médios */
-        padding: 20px; /* Ajusta espaçamento interno */
-        background-size: contain; /* Ajusta imagem para caber na tela */
-        background-repeat: no-repeat; /* Evita repetição da imagem */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        min-height: 150px; /* Altura mínima reduzida para dispositivos pequenos */
-        padding: 10px;
-        background-position: center top; /* Ajusta posição da imagem */
     }
 }
