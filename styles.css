@@ -20,6 +20,7 @@ header {
     padding-bottom: 40px;
 }
 
+/* Botão do WhatsApp */
 header a[href*="wa.me"] button {
     padding: 10px 20px;
     background-color: #25D366;
@@ -31,10 +32,29 @@ header a[href*="wa.me"] button {
     cursor: pointer;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    animation: pulsar 1.5s ease-in-out infinite; /* Animação de pulsação */
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
+/* Animação de pulsação */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Efeito hover no botão do WhatsApp */
 header a[href*="wa.me"] button:hover {
-    background-color: #128C7E;
+    background-color: #128C7E; /* Cor alternativa no hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
 /* Sobre */
@@ -89,6 +109,11 @@ header a[href*="wa.me"] button:hover {
     text-align: center;
     color: #C2954D;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Suaviza a transição */
+}
+
+#servicos li:hover {
+    transform: translateY(-10px); /* Move a caixa para cima ao passar o mouse */
 }
 
 #servicos h3 {
@@ -136,7 +161,7 @@ form input, form textarea {
 }
 
 form button {
-   background-color: #C2954D;
+    background-color: #C2954D;
     color: #000000;
     border: none;
     padding: 10px 20px;
@@ -169,8 +194,8 @@ footer {
     }
 
     header a[href*="wa.me"] button {
-        width: 100%;
-        text-align: center;
+        width: auto; /* Ajusta largura automaticamente */
+        padding: 10px 15px;
     }
 }
 
@@ -187,16 +212,10 @@ footer {
     #sobre p, #contato {
         padding: 10px;
     }
-}
 
-@media (max-width: 480px) {
-    form {
-        width: 100%;
-        padding: 0 10px; /* Garante alinhamento com as margens */
-    }
-
-    form button {
-        max-width: 100%; /* O botão ocupa toda a largura disponível */
+    header a[href*="wa.me"] button {
+        width: 100%; /* Ocupa toda a largura disponível */
+        text-align: center;
     }
 }
 
